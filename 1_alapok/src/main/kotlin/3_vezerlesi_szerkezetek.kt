@@ -72,7 +72,7 @@ fun main(){
         }
         println()
     }
-    
+
     println()
 
     val numbers = listOf( 3, 5, 7, 9, 11 )
