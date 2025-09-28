@@ -16,4 +16,11 @@ fun main() {
 
     println(sum)
 
+    //Tömb
+    val d = arrayOf( 1, 2, 3, 4)
+    
+    println( d[ 0 ] )
+    d[ 0 ] = 5
+    println( d[ 0 ] )
+
 }
