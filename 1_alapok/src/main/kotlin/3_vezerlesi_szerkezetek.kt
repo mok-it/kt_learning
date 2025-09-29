@@ -33,7 +33,10 @@ fun grade( score: Int ): Int{
 
 fun grade2( score: Int ): Int{
     when{
-        score >= 85 -> return 5
+        score >= 85 -> {
+            println( "nagyon ügyes voltál")
+            return 5
+        }
         score >= 70 -> return 4
         score >= 55 -> return 3
         score >= 40 -> return 2
@@ -78,6 +81,7 @@ fun main(){
     val numbers = listOf( 3, 5, 7, 9, 11 )
 
     for( n in numbers ){
+        if( n == 5 ) continue
         println( n * 2 )
     }
 

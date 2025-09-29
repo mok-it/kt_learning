@@ -1,7 +1,7 @@
 
 // Külön típus, aminek lehet null értéke is
 
-val a: Int = null
+//val a: Int = null
 val b: Int? = null
 
 // Nullable típusoknál külön operátorok
@@ -19,6 +19,11 @@ fun safeLength( s: String? ): Int {
 fun notSoSafeLength( s: String? ): Int {
     // Nem biztonságos hívás (not-null assertion)
     return s!!.length
+}
+
+fun stringCast() {
+    val a : String? = null
+    val b = a!!
 }
 
 fun safeLength2( s: String? ): Int {

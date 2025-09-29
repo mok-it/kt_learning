@@ -23,3 +23,19 @@ fun main() {
     // Név szerinti paraméter átadás
     printNameMail( email = "alice@example.com", name = "Alice" )
 }
+
+fun grade5( score: Int? ): Int {
+    when( score ){
+        100 -> {
+            println("Perfect score!" )
+            return 5
+        }
+        null -> {
+            println("No score provided" )
+            return -1
+        }
+        else -> {
+            return score / 20
+        }
+    }
+}
