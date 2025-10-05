@@ -7,4 +7,5 @@ Fogaskerék -> Plugins
 
 Ajánlott pluginok:
 
+- Nyan Progress Bar
 - GitHub Copilot: AI alapú kódjavaslatok

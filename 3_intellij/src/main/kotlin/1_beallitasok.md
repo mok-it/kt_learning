@@ -12,6 +12,8 @@ Mentéskor formázás: Tools -> Actions on Save
 - Reformat code
 - Optimize imports
 
+Paraméter nevek megjelenítése: Editor -> Inlay hints -> Parameter names
+
 Billentyűparancsok testreszabása
 
 - Fogaskerék -> Keymap

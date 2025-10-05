@@ -21,5 +21,10 @@ fun function() {
     someFunction()
 }
 
+//Konzisztens átnevezés: Shift + F6
+val b: Int = 10
+
+val maxWidth = b * 0.8
+
 // Multifunkciós kereső előhozása: Shift + Shift
 // pl. gradle sync
