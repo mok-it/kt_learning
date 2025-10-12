@@ -15,6 +15,10 @@ fun main() {
     )
 
     println(
+        l.myMap(myLambda)
+    )
+
+    println(
         l.myMap { it.last() }
     )
 }
