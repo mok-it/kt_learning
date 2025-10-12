@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
 import medveapp.Student
 import medveapp.TShirtSize
 import java.time.LocalDate
@@ -15,11 +16,14 @@ import kotlin.random.Random
 
 @Composable
 fun CreateStudentCard(
+    modifier: Modifier = Modifier,
     onCreateClick: (Student) -> Unit,
 ) {
     val name = remember { mutableStateOf("") }
 
-    Card {
+    Card(
+        modifier = modifier
+    ) {
         Row {
             TextField(
                 value = name.value,

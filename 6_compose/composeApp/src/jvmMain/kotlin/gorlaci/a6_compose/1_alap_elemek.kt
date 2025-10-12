@@ -10,8 +10,12 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.TextField
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
 
+@Preview
 @Composable
 fun JustAText() {
     Text("Just a text")
@@ -28,10 +32,10 @@ fun JustAButton() {
 
 @Composable
 fun JustATextField() {
-    var text = "Just a text field"
+    val text = remember { mutableStateOf("Just a text field") }
     TextField(
-        value = text,
-        onValueChange = { text = it }
+        value = text.value,
+        onValueChange = { text.value = it }
     )
 }
 
@@ -46,5 +50,8 @@ fun JustADatePicker() {
 
 @Composable
 fun JustAnImage() {
-    Image(painterResource(Res.drawable.compose_multiplatform), null)
+    Image(
+        painterResource(Res.drawable.compose_multiplatform),
+        null
+    )
 }

@@ -3,8 +3,13 @@ package gorlaci.a6_compose
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.Button
-import androidx.compose.material3.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.AddHome
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Image
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -215,6 +220,62 @@ fun BoxAlignments() {
             modifier = Modifier.align(Alignment.BottomEnd)
         ) {
             Text("Click me")
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun SimpleScaffold() {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("My App") },
+                navigationIcon = {
+                    IconButton(
+                        onClick = {}
+                    ) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "Navigate backwards")
+                    }
+                },
+                actions = {
+                    IconButton(onClick = {}) {
+                        Icon(Icons.Default.Image, null)
+
+                    }
+                    IconButton(onClick = {}) {
+                        Icon(Icons.Default.AddHome, null)
+                    }
+                }
+            )
+        },
+        bottomBar = {
+            BottomAppBar(
+                floatingActionButton = {
+                    FloatingActionButton(onClick = {}) {
+                        Icon(Icons.Default.Add, null)
+                    }
+                },
+                actions = {
+                    IconButton(onClick = {}) {
+                        Icon(Icons.Default.Home, null)
+                    }
+                    TextButton(onClick = {}) {
+                        Text("List")
+                    }
+                }
+            )
+        },
+    ) { padding ->
+        Column(
+            modifier = Modifier
+                .padding(padding)
+                .fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text("Hello Scaffold!")
+            Text("Content goes here")
         }
     }
 }
